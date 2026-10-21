@@ -1,0 +1,17 @@
+devices -> insert guest cd and shared folder setting add Win folders
+
+ls /media
+
+sudo usermod -aG vboxsf $USER
+
+sudo reboot
+
+ls /media/sf_VMShared
+
+gedit VM1.txt
+
+cp VM1.txt /media/sf_VMShared/
+
+ls /media/sf_VMShared
+
+cat the all txt files

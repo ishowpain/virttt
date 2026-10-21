@@ -1,0 +1,6 @@
+Ex:4 xen server
+server->add
+new vm
+1.cent os
+2.xs.tool
+3.move vm

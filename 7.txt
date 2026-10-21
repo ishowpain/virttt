@@ -1,0 +1,22 @@
+Ex:7 hyper v
+1.turn windows
+2.hyper v manager
+3.new->vm->gen 2->default switch->30->iso path
+4.security->Microsoft UEFI
+
+
+powershell cmd:
+
+Get-VMSwitch
+
+New-VM -Name "VM1" -MemoryStartupBytes 1GB -Generation 2 -NewVHDPath "C:\Hyper-V\VM1.vhdx" -NewVHDSizeBytes 20GB
+
+Connect-VMNetworkAdapter -VMName "VM1" -SwitchName "Default Switch"
+
+Add-VMDvdDrive -VMName "VM1" -Path "C:\Path\Ubuntu.iso"
+
+Start-VM -Name "VM1"
+
+Get-VM -Name "VM1"
+
+Stop-VM -Name "VM1"

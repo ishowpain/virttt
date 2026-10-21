@@ -1,0 +1,37 @@
+disk
+->disk management
+action->create vhd->(create new folder on c drive) and paste the path\new.vhd
+200mb->vhd->fixed size
+initialize disk->mbr
+new simple volume -> finish
+
+
+Storage Virtualization in vm:
+
+settings-> storage->controller:SATA->create,7gb
+
+sudo fdisk -l
+
+sudo apt update
+sudo apt install lvm2 -y
+
+sudo pvcreate /dev/sdb
+
+sudo vgcreate storage-vg /dev/sdb
+
+sudo vgdisplay
+
+sudo lvcreate -L 3G -n storage-lv storage-vg
+
+sudo lvdisplay
+
+sudo mkfs.ext4 /dev/storage-vg/storage-lv
+
+sudo mkdir /storage
+
+sudo mount /dev/storage-vg/storage-lv /storage
+
+df -h
+
+sudo touch /storage/test.txt
+ls -l /storage

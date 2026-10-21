@@ -1,0 +1,4 @@
+EX:2 ping
+1.host-only adaptar
+2.ip a,ipconfig
+3.ping

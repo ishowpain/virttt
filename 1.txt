@@ -1,0 +1,13 @@
+1.ls
+2.pwd
+3.cd
+4.mkdir
+5.touch
+6.rm
+7.cp t1.txt t2.txt
+8.mv “
+9.nano
+10.cat
+11.gedit
+12.ps
+13.top
